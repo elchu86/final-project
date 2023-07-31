@@ -1,0 +1,177 @@
+/* global styles */
+
+li {
+  list-style: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* body */
+
+body {
+  margin: 15px;
+  background-image: url("https://i.imgur.com/ugOIVcQ.jpg");
+}
+
+p, h1, h2 {
+  font-family: 'Jura', sans-serif;
+}
+
+/* header menu */
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header>nav>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header a {
+  color: rgb(255, 255, 255);
+}
+
+header ul {
+  padding-inline-start: 0px;
+}
+
+/* join button */
+
+.join-button-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Make the image responsive */
+.join-button-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.join-button-container .join-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.join-button-container .join-button:hover {
+  background-color: black;
+}
+
+.join-button {
+  font-family: 'Jura', sans-serif;
+}
+
+/* community/dev/news nav */
+
+.mid-screen-menu {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+}
+
+.mid-screen-menu ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-inline-start: 0px;
+}
+
+.mid-screen-menu a {
+  color: white;
+}
+
+/*  Features */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.feature-grid img {
+  width: 100%;
+}
+
+.feature-item {
+  position: relative;
+}
+
+.feature-text {
+  position: absolute;
+  width: 100%;
+  font-family: 'Jura', sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 5px; /* change to match grid gap */
+}
+
+.feature-text h2 {
+  margin: 0px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.feature-text p {
+  margin: 0px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+}
+
+footer ul {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Media Queries */
