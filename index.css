@@ -1,0 +1,517 @@
+/* universal styling */
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px; /* targetting this as max width because most gamers still use 1080p displays, looks fine on larger displays too */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-top: 4.5rem; /* make sure header nav & body margin-top match + .5rem */
+    background-color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+a {
+    text-decoration: none;
+    transition: color 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+a:hover {
+    color: rgba(50, 135, 220)
+}
+  
+h1, h2, p, a, li {
+    font-family: 'Jura', sans-serif;
+}
+
+/* header menu */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99; /* header always to the front of content */
+}
+
+header img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 4rem; /* make sure header nav & body margin-top match */
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(60, 60, 60);
+  }
+  
+header>nav>ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0px;
+  }
+
+.try-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(72, 72, 72, .5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: white solid 1px;
+    border-top-left-radius: .75rem;
+    transition: background-color 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.sub-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(72, 72, 72, .5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: white solid 1px;
+    border-bottom-right-radius: .75rem;
+    transition: background-color 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.try-button:hover, .sub-button:hover {
+    background-color: rgb(50, 135, 220);
+}
+  
+  header a {
+    color: rgb(255, 255, 255);
+  }
+  
+  header ul {
+    padding-inline-start: 0px;
+  }
+
+/* hero video properties */
+
+.hero-video {
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: rgba(255, 251, 251, 0.25);
+}
+
+.hero-video video {
+    width: 100%;
+    height: auto;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
+    bottom: 30%;
+    left: 5%;
+    width: 35%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 1rem;
+}
+
+/*
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, .5);
+    position: absolute;
+    padding: 1rem;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border: 1px solid white;
+    border-top-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+}
+*/
+
+.hero-content h2 {
+    color: white;
+    margin-top: 0px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    padding-left: 0;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: left;
+}
+
+.play-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(72, 72, 72, .5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: white solid 1px;
+    border-top-left-radius: .75rem;
+    transition: background-color 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.learn-more-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(72, 72, 72, .5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: white solid 1px;
+    border-bottom-right-radius: .75rem;
+    transition: background-color 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.play-button:hover, .learn-more-button:hover {
+    background-color: rgba(50, 135, 220);
+}
+
+/* hero image styling (hidden when video is active) */
+
+.alt-hero-image img {
+    width: 100%;
+}
+
+.alt-hero-image {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid rgba(255, 251, 251, 0.25);
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.alt-hero-image-content {
+    position: absolute;
+    z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
+    bottom: 1rem;
+    left: 1rem;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.alt-hero-image-content h2, p {
+    color: white;
+    padding-left: 1rem;
+}
+
+/* content one styling */
+
+.feature-content img {
+    width: 100%;
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid rgba(255, 251, 251, 0.25);
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.feature-content-text-left {
+    position: absolute;
+    z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
+    bottom: 1rem;
+    left: 1rem;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.feature-content-text-right {
+    position: absolute;
+    z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
+    bottom: 1rem;
+    right: 1rem;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.feature-content-text-left h2, p {
+    color: white;
+    padding: 0;
+}
+
+.feature-content-text-left button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(72, 72, 72, .5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: white solid 1px;
+    border-bottom-right-radius: .75rem;
+    transition: background-color 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.feature-content-text-right h2, p {
+    color: white;
+    padding: 0;
+}
+
+.feature-content-text-right button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(72, 72, 72, .5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: white solid 1px;
+    border-bottom-right-radius: .75rem;
+    transition: background-color 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+/* features grid */
+
+.feature-grid {
+    width: 100%;
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.feature-grid img {
+    width: 100%;
+}
+
+.grid-item {
+    position: relative;
+    display: flex;
+    border: 1px solid rgba(255, 251, 251, 0.25);
+}
+
+.grid-item-content {
+    width: 80%;
+    position: absolute;
+    z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
+    bottom: 5%;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding-left: .75rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    padding-right: .75rem;
+}
+
+.grid-item-content h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+    padding-bottom: .75rem;
+}
+
+.grid-item-content p {
+    color: white;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    padding-bottom: .75rem;
+}
+
+.feature-grid button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(72, 72, 72, .5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: white solid 1px;
+    border-bottom-right-radius: .75rem;
+    transition: background-color 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.feature-grid button:hover {
+    background-color: rgb(50, 135, 220);
+}
+
+/* socials nav styling */
+
+.socials-nav nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 4rem; /* match to header */
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(60, 60, 60);
+    border: 1px solid rgba(255, 251, 251, 0.25);
+}
+
+.socials-nav>nav>ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0px;
+}
+
+.social-logo {
+    height: 1.5rem;
+    width: auto;
+}
+
+/* footer */
+
+.bottom-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-logo img {
+    height: 4rem;
+}
+
+.bottom-logo p {
+    margin-block-start: 0;
+    padding: 0;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 1.5rem;
+}
+
+.copyright {
+    font-size: .75rem;
+}
+
+
+/* media queiries */
+
+@media (max-width: 1200px) {
+    /* where content over video looks less than ideal, push buttons beneath video to maintain good readability, change grid layout*/
+    .hero-content {
+        width: 50%;
+        left: 25%; /* change to half of remaining percentage of width to center content */
+        bottom: 10%;
+    }
+    .hero-content h2 {
+        color: white;
+        margin-top: 0px;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .hero-content p {
+        padding-left: 0;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .buttons {
+        justify-content: center;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    /* for screens up to 650px width */
+    .alt-hero-image {
+        display: flex;
+    }
+    .hero-video {
+        display: none;
+    }
+    .alt-hero-image-content {
+        position: static;
+        width: 100%;
+        bottom: none;
+        left: none;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .feature-content-text-left {
+        position: static;
+        z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
+        bottom: none;
+        left: none;
+        width: 100%;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .feature-content-text-right {
+        position: static;
+        z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
+        bottom: none;
+        left: none;
+        width: 100%;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .feature-grid {
+        width: 100%;
+        display: grid;
+        gap: .5rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+

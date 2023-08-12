@@ -3,136 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Landing Page</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <title>Game Website Template</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
 
     <header>
-        <nav>
-            <ul>
-                <li><img src="" alt="inline-logo"></li>
-            </ul>
-            <ul>
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">Support</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><img src="logo.png" alt="logo"></li>
+          <li><a href="#">Play Now</a></li>
+          <li><a href="#">About The Game</a></li>
+          <li><a href="#">Store</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Account</a></li>
+          <li><button class="try-button">Try For Free</button></li>
+          <li><button class="sub-button">Subscribe</button></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
+    <section class="hero-video"> <!-- hero content is prominant content on page, the first thing your eye should be drawn to -->
+        <video src="video.mp4" muted loop autoplay></video> <!-- video with conditions for autoplay loop etc -->
+        <div class="hero-content">
+            <h2>Welcome to the Game</h2>
+            <p>Experience the adventure of a lifetime in this epic game.</p>
+            <div class="buttons">
+                <button class="play-button">Purchase This Game</button>
+                <button class="learn-more-button">Learn More</button>
+            </div>
+        </div>
+    </section>
 
-        <section class="top-grid">
-            <!-- copy and edit items to add more as required, change grid properties in css to suit multiple items -->
-            <article class="join-button-container">
-                <img src="https://i.imgur.com/bANwYvn.png" alt="join-button-image">
-                <button class="join-button">Play Now</button>
-            </article>
-        </section>
+    <section class="alt-hero-image"> <!-- show this when page drops below preset horizontal resolution to replace video -->
+      <img src="https://i.imgur.com/gWXwV81.png" alt="hero image">
+      <div class="alt-hero-image-content">
+        <h2>Welcome to the Game</h2>
+        <p>Experience the adventure of a lifetime in this epic game.</p>
+        <button class="play-button">Purchae This Game</button>
+        <button class="learn-more-button">Learn More</button>
+      </div>
+    </section>
 
-        <section>
-            <article>
-                <nav class="mid-screen-menu">
-                    <ul>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Developement</a></li>
-                    </ul>
-                </nav>
-            </article>
-        </section>
+    <section class="feature-content">
+      <img src="https://i.imgur.com/gWXwV81.png" alt="content one image">
+          <div class="feature-content-text-left">
+              <h2>Heading Here</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam itaque architecto vitae magni, explicabo quaerat ducimus deleniti deserunt recusandae. Provident aspernatur debitis odio nobis dolores iure eveniet, neque aliquam.</p>
+              <button class="feature-content-button">More Info</button>
+          </div>
+    </section>
 
-        <section class="feature-grid">
-            <!-- copy and edit items to add more as required -->
-            <!-- ITEM 01 -->
-            <article class="feature-item">
-                <img src="https://i.imgur.com/OSEuH8P.png" alt="feature-image">
-                <div class="feature-text">
-                    <h2>Explore Futuristic Cities</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis labore quibusdam aperiam magni ut aliquid.</p>
-                </div>
-            </article>
+    <section class="feature-grid">
+      <!-- keep grid item P text to minimum for readability -->
 
-            <!-- ITEM 02 -->
-            <article class="feature-item">
-                <img src="https://i.imgur.com/DXAG0rR.png" alt="feature-image">
-                <div class="feature-text">
-                    <h2>Visit New Planets</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis labore quibusdam aperiam magni ut aliquid.</p>
-                </div>
-            </article>
+      <!-- grid item one -->
+      <article class="grid-item">
+        <img src="https://i.imgur.com/w6XcHL4.png" alt="grid background image"> <!-- grid item background image here -->
+        <div class="grid-item-content">
+          <h2>Title goes here</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non incidunt facere quam repellendus distinctio ducimus dolores.</p>
+          <button>Find Out More</button>
+        </div>
+      </article>
+      <!-- end of grid item -->
 
-            <!-- ITEM 03 -->
-         <article class="feature-item">
-            <img src="https://i.imgur.com/HlrBqzC.png" alt="feature-image">
-                <div class="feature-text">
-                    <h2>Pilot Spacecraft</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis labore quibusdam aperiam magni ut aliquid.</p>
-                </div>
-            </article>
+      <!-- grid item two -->
+      <article class="grid-item">
+        <img src="https://i.imgur.com/DXAG0rR.png" alt="grid background image"> <!-- grid item background image here -->
+        <div class="grid-item-content">
+          <h2>Title goes here</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non incidunt facere quam repellendus distinctio ducimus dolores.</p>
+          <button>Find Out More</button>
+        </div>
+      </article>
+      <!-- end of grid item -->
 
+      <!-- grid item three -->
+      <article class="grid-item">
+        <img src="https://i.imgur.com/poRIdWA.png" alt="grid background image"> <!-- grid item background image here -->
+        <div class="grid-item-content">
+          <h2>Title goes here</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non incidunt facere quam repellendus distinctio ducimus dolores.</p>
+          <button>Find Out More</button>
+        </div>
+      </article>
+      <!-- end of grid item -->
 
-                <!-- ITEM 04 -->
-            <article class="feature-item">
-                <img src="https://i.imgur.com/poRIdWA.png" alt="feature-image">
-                <div class="feature-text">
-                    <h2>Character Builder</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis labore quibusdam aperiam magni ut aliquid.</p>
-                </div>
-            </article>
+      <!-- grid item four -->
+      <article class="grid-item">
+        <img src="https://i.imgur.com/HlrBqzC.png" alt="grid background image"> <!-- grid item background image here -->
+        <div class="grid-item-content">
+          <h2>Title goes here</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non incidunt facere quam repellendus distinctio ducimus dolores.</p>
+          <button>Find Out More</button>
+        </div>
+      </article>
+      <!-- end of grid item -->
 
-            <!-- ITEM 05 -->
-            <article class="feature-item">
-                <img src="https://i.imgur.com/w6XcHL4.png" alt="feature-image">
-                <div class="feature-text">
-                    <h2>Explore by Road</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis labore quibusdam aperiam magni ut aliquid.</p>
-                </div>
-            </article>   
-            
-            <!-- ITEM 06 -->
-            <article class="feature-item">
-                <img src="https://i.imgur.com/YiIrAYX.png" alt="feature-image">
-                <div class="feature-text">
-                    <h2>Battle Dangerous Foes</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis labore quibusdam aperiam magni ut aliquid.</p>
-                </div>
-            </article>
+      <!-- grid item five -->
+      <article class="grid-item">
+        <img src="https://i.imgur.com/OSEuH8P.png" alt="grid background image"> <!-- grid item background image here -->
+        <div class="grid-item-content">
+          <h2>Title goes here</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non incidunt facere quam repellendus distinctio ducimus dolores.</p>
+          <button>Find Out More</button>
+        </div>
+      </article>
+      <!-- end of grid item -->
 
-        </section>
+      <!-- grid item six -->
+      <article class="grid-item">
+        <img src="https://i.imgur.com/YiIrAYX.png" alt="grid background image"> <!-- grid item background image here -->
+        <div class="grid-item-content">
+          <h2>Title goes here</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non incidunt facere quam repellendus distinctio ducimus dolores.</p>
+          <button>Find Out More</button>
+        </div>
+      </article>
+      <!-- end of grid item -->
+    </section>
 
-    </main>
-
-    <footer> 
-            <ul>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Youtube</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">EULA</a></li>
-                <li><a href="#">DMCA</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>
-    </footer>
-
-    <nav class="navbar">
+    <section class="feature-content">
+      <img src="https://i.imgur.com/AmA3aUR.png" alt="content one image">
+          <div class="feature-content-text-right">
+              <h2>Heading Here</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam itaque architecto vitae magni, explicabo quaerat ducimus deleniti deserunt recusandae. Provident aspernatur debitis odio nobis dolores iure eveniet, neque aliquam.</p>
+              <button class="feature-content-button">More Info</button>
+          </div>
+    </section>
+    
+    <section class="socials-nav">
+      <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+          <li><p>Follow Us</p></li>
+          <li>
+            <a  href="https://facebook.com">
+              <img class="social-logo" src="fb-logo.png" alt="Facebook Logo">
+          </a>
+          </li>
+          <li>
+            <a  href="https://instagram.com">
+              <img class="social-logo" src="insta-logo.png" alt="Instagram Logo">
+          </a>
+          </li>
+          <li>
+            <a  href="https://twitter.com">
+              <img class="social-logo" src="x-logo.png" alt="X Logo">
+          </a>
+          </li>
+          <li>
+            <a  href="https://youtube.com">
+              <img class="social-logo" src="yt-logo.png" alt="Youtube Logo">
+          </a>
+          </li>
+          <li>
+            <a  href="https://reddit.com">
+              <img class="social-logo" src="reddit-logo.png" alt="Reddit Logo">
+          </a>
+          </li>
         </ul>
-    </nav>
+      </nav>
+    </section>
 
+    <footer>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="bottom-logo">
+        <li><img src="logo.png" alt="logo"></li>
+        <li><p>P R ENTERTAINMENT</p></li>
+        <li><p class="copyright">©2023 P R ENTERTAINMENT</p></li>
+      </ul>
+    </footer>
 
 </body>
 </html>
