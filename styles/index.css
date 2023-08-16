@@ -107,6 +107,33 @@ h1, h2, p, a, li {
     margin-top: 1rem;
   }
 
+/* drop down menu */
+
+.dropdown-menu-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99; /* header always to the front of content */
+}
+
+.dropdown-menu-navbar {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 4rem; /* make sure header nav & body margin-top match */
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(60, 60, 60);
+}
+
+.dropdown-menu-navbar img {
+    height: 80%;
+}
+
 /* header menu */
 
 header {
@@ -515,7 +542,7 @@ footer a {
 
 /* media queiries */
 
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
     /* where content over video looks less than ideal, push buttons beneath video to maintain good readability, change grid layout*/
     .hero-content {
         width: 50%;
@@ -543,8 +570,13 @@ footer a {
     }
 }
 
-@media (max-width: 900px) {
-    /* for screens up to 650px width */
+@media (max-width: 1000px) {
+    .dropdown-menu-navbar {
+        display: flex;
+    }
+    header {
+        display: none;
+    }
     .alt-hero-image {
         display: flex;
     }
