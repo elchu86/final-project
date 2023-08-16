@@ -110,7 +110,7 @@ h1, h2, p, a, li {
 /* drop down menu */
 
 .dropdown-menu-navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -290,26 +290,90 @@ header>nav>ul {
     display: none;
     flex-direction: column;
     position: relative;
+    border: 1px solid white;
+    margin-top: 4rem;
+    margin-bottom: .5rem;
+}
+
+.alt-hero-image-content {
+    position: static;
+    z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
+    bottom: 1rem;
+    left: 1rem;
+    width: 50%;
+    border-top: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.alt-hero-image-content h2 {
+    color: white;
+    padding-left: 1rem;
+}
+
+.alt-hero-image-content p {
+    color: white;
+    padding-left: 1rem;
+}
+
+.alt-hero-image-content button {
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(72, 72, 72, .5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: white solid 1px;
+    transition: background-color 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.alt-hero-image-content button:hover {
+    background-color: rgba(50, 135, 220);
+}
+
+/* feature content styling for small screens, set to display:none as default */
+
+.feature-content-alt {
+    display: flex; /* change to flex in media query */
+    flex-direction: column;
+    position: relative;
     border: 1px solid rgba(255, 251, 251, 0.25);
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
 
-.alt-hero-image-content {
-    position: absolute;
-    z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
-    bottom: 1rem;
-    left: 1rem;
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid white;
-    border-top-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+.feature-content-info {
+    display: flex;
+    flex-direction: column;
 }
 
-.alt-hero-image-content h2, p {
+.feature-content-info button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(72, 72, 72, .5);
+    border: none;
     color: white;
-    padding-left: 1rem;
+    cursor: pointer;
+    border: white solid 1px;
+    transition: background-color 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.feature-content-info h2 {
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.feature-content-info p {
+    margin-top: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.feature-content-info button:hover {
+    background-color: rgba(50, 135, 220);
 }
 
 /* content one styling */
@@ -319,7 +383,7 @@ header>nav>ul {
 }
 
 .feature-content {
-    display: flex;
+    display: flex; /*change to none in media query for small screens */
     flex-direction: column;
     position: relative;
     border: 1px solid rgba(255, 251, 251, 0.25);
@@ -591,29 +655,20 @@ footer a {
         border-top-left-radius: 0;
         border-bottom-right-radius: 0;
     }
-    .feature-content-text-left {
-        position: static;
-        z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
-        bottom: none;
-        left: none;
-        width: 100%;
-        border-top-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-    .feature-content-text-right {
-        position: static;
-        z-index: 10; /* display at front of other items, keep below 99 to avoid header issues */
-        bottom: none;
-        left: none;
-        width: 100%;
-        border-top-left-radius: 0;
-        border-bottom-right-radius: 0;
+    .feature-content {
+        display: none;
     }
     .feature-grid {
         width: 100%;
         display: grid;
         gap: .5rem;
         grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .feature-content-alt {
+        display: none;
     }
 }
 
